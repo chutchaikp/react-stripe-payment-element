@@ -21,6 +21,7 @@ const CheckoutForm = () => {
       }
       setIsProcessing(true);
 
+      // *****
       const { error } = await stripe.confirmPayment({
         elements,
         confirmParams: {
@@ -30,6 +31,7 @@ const CheckoutForm = () => {
       if (error) {
         setMessage(error.message);
       }
+
       setIsProcessing(false);
     } catch (error) {
       debugger;

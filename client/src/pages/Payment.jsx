@@ -9,6 +9,7 @@ const Payment = () => {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState('');
 
+  // set public
   useEffect(() => {
     try {
       const publicKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
@@ -19,13 +20,16 @@ const Payment = () => {
     }
   }, []);
 
+  // set secret
   useEffect(() => {
     async function stripeIntents() {
       try {
         debugger;
         const { data } = await axios.post(
           'http://localhost:5000/create-payment-intent',
-          {}
+          {
+            // details here
+          }
         );
         const _clientSecret = data.clientSecret;
         setClientSecret(_clientSecret);
