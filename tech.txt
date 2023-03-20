@@ -1,0 +1,7 @@
+- Learn
+
+React Stripe.js and the Payment Element
+https://www.youtube.com/watch?v=e-whXipfRvg&list=PLJUyh5ULdyuAwe4HoMNJAVm7GAAddxwFT&index=2&t=1s
+
+How to integrate Stripe's Payment Element
+https://www.youtube.com/watch?v=MfFCg7kYCa4&list=PLJUyh5ULdyuAwe4HoMNJAVm7GAAddxwFT&index=1
