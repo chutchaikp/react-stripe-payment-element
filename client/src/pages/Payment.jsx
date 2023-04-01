@@ -31,6 +31,8 @@ const Payment = () => {
             // details here
           }
         );
+
+        debugger;
         const _clientSecret = data.clientSecret;
         setClientSecret(_clientSecret);
       } catch (error) {

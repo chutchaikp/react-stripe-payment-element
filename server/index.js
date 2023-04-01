@@ -17,11 +17,12 @@ app.post('/create-payment-intent', async (req, res) => {
 	const stripe = new Stripe(skey)
 	try {
 		const paymentIntent = await stripe.paymentIntents.create({
+			payment_method_types: ['card'],
 			currency: 'thb',
-			amount: 3099,
-			automatic_payment_methods: {
-				enabled: true,
-			}
+			amount: 3199,
+			// automatic_payment_methods: {
+			// 	enabled: true,
+			// }
 		})
 		res.send({ clientSecret: paymentIntent.client_secret })
 	} catch (error) {
